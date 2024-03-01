@@ -37,6 +37,7 @@ body {
   font-family: Michroma, sans-serif;
   font-weight: bold;
   transition: background 0.2s ease;
+  background: #4a5674;
 }
 
 body.off {
@@ -51,6 +52,7 @@ body.off {
 .container {
   display: flex;
   justify-content: center;
+  margin-top: 8rem;
 }
 
 /* Utility classes */
@@ -176,13 +178,18 @@ span.arrow.right {
     align-items: center;
     width: calc(var(--width) * 1.1);
 
+    & .buttons-container {
+      pointer-events: none;
+      user-select: none;
+    }
+
     & .button-notch {
       width: 8px;
       height: 60px;
       background: #262626;
       clip-path: var(--button-notch-shape);
 
-      &+.button {
+      & + .button {
         width: 18px;
         height: 20px;
         border: 1px solid #989f7c;
@@ -193,11 +200,11 @@ span.arrow.right {
         pointer-events: all;
       }
 
-      &.right+.button {
+      &.right + .button {
         transform: translate(0, -40px);
       }
 
-      &.left+.button {
+      &.left + .button {
         transform: translate(-12px, -40px);
       }
 
@@ -400,7 +407,7 @@ span.arrow.right {
         border-radius: 5px 5px 20px 20px / 5px 5px 30px 30px;
         transform: translate(0, 8px);
 
-        &>span {
+        & > span {
           display: inline-block;
           transform: translate(0, -2px);
         }

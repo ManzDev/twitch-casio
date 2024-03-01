@@ -1,4 +1,4 @@
-const WEEKDAY = ["5V", "MO", "TV", "WE", "TH", "FR", "5A"];
+const WEEKDAY = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
 
 const dom = {
   day: document.querySelector(".day"),
